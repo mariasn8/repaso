@@ -9,8 +9,8 @@ public class palind {
         for (int i = n; i >= 0; i--) {  //invierto la palabra
             inv += palabra.charAt(i);  //inv=inv+palabra.charAt(i);
         }
-        System.out.println(inv);
         System.out.println(palabra);
+        System.out.println(inv);
         if (x.equals(inv)) {
             //System.out.println(" Es un palíndromo");
             return true;
@@ -25,13 +25,15 @@ public class palind {
                 }*/
     }
 
-    public static boolean palrec(String palabra) {  //return true si es un palíndromo; false si no lo es
-        int n = palabra.length() - 1;
-        String x = palabra;
-        String inv = "";
-        if (x.equals(inv)) {  //es un palind
+    public static boolean palrec (String palabra) {  //return true si es un palíndromo; false si no lo es
+        int n = palabra.length();
+        if(n<=1)  //es un palíndromo
             return true;
-        } else
-            return palrec();
+
+        if (palabra.charAt(0) == palabra.charAt(n-1)) {  //si la 1ª letra es = a la última
+            return palrec(palabra.substring(1, n-1));  //coge la palabra quitándole la 1ª y última letra
+        }
+        else   //no es palíndromo
+            return false;
+        }
     }
-}
