@@ -22,4 +22,10 @@ public class euclides {
         return 0;
     }
 
+
+    public static int euclambda (int m, int n){
+        //Stream.iterate()
+        return 0;
+    }
+
 }
