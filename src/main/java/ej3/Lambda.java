@@ -5,7 +5,7 @@ public class Lambda {  //pasar a hexadecimal
     public static String baseN (int num, int base) {  //pasar a base n<10 con lambda
         String cambio="";
         cambio = Stream.iterate(num, n -> n/base)  //secuencia de la división de num/base
-            .takeWhile(n -> n>0)
+            .takeWhile(n -> n>0)  //coge los numeros mayores que 0
             .map(n -> n%base)  //coge el resto
             .map(n -> Integer.toString(n))  //cambia el resto a string
             .reduce("", (a,b) -> b+a);  //cambia el orden de los numeros, coge el ultimo resto y lo pone el primero
