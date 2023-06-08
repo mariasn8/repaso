@@ -1,9 +1,7 @@
 package ej3;
-import java.util.*;
-import java.util.function.*;
 import java.util.stream.*;
 
-public class lambda {  //pasar a hexadecimal
+public class Lambda {  //pasar a hexadecimal
     public static String baseN (int num, int base) {  //pasar a base n<10 con lambda
         String cambio="";
         cambio = Stream.iterate(num, n -> n/base)  //secuencia de la división de num/base
@@ -15,7 +13,7 @@ public class lambda {  //pasar a hexadecimal
         return cambio;
     }
 
-    public static String base16 (int num) {
+    public static String base16 (int num) {  //pasar a hexadecimal con lambda
         String cambio="";
         String caract="0123456789ABCDEF";
         cambio = Stream.iterate(num, n -> n/16)

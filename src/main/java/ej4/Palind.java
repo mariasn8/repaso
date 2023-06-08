@@ -1,6 +1,6 @@
 package ej4;
 
-public class palind {
+public class Palind {
     //imprimir palabra, darle la vuelta e imprimir. Si son = palind, sino no palind
     public static boolean paliter(String palabra) { //devuelve true si es palíndromo; false si no lo es
         int n = palabra.length() - 1;  //ultima letra de la palabra    de 0 a 24 letras

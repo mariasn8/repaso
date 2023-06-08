@@ -1,6 +1,6 @@
 package ej2;
 
-public class funcion {
+public class Funcion {
     //la función muestra los múltiplos del número. Un nombre sería multiplos2
     public static void frec (int num, int div){
         if(num>1){
