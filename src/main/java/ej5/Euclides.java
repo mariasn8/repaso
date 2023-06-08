@@ -1,4 +1,5 @@
 package ej5;
+import java.util.stream.*;
 
 public class Euclides {
     public static int eucrec (int m, int n){
@@ -29,8 +30,11 @@ public class Euclides {
 
 
     public static int euclambda (int m, int n){
-        //Stream.iterate()
-        return 0;
+        return Stream.iterate(new int [] {m, n}, x -> new int [] {x[1], x[0] % x[1]})  // sería n y r
+                .filter(x -> x[1] == 0)  //si el resto es 0
+                .findFirst()  //coge el primero cuyo resto sea 0
+                .map(x -> x[0])  //coge el primer numero
+                .get(); //coge el valor
     }
 
 }
